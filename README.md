@@ -21,6 +21,13 @@ The system takes the following health features as inputs:
 - **thal**: Thalassemia type (3 for normal, 6 for fixed defect, 7 for reversable defect)
 
 The model predicts the presence of heart disease or no heart disease.
+ Dataset
+
+The dataset used for training the model is from Kaggle:
+
+- **Dataset**: [Heart Disease Dataset](https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset)
+
+## Installation
 
 ## Project Structure
 
