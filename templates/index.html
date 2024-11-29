@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Heart Disease Prediction</h1>
+    <form method="POST">
+        <label for="age">Age (e.g., 52): </label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="sex">Gender:</label>
+        <select id="sex" name="sex" required>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select><br><br>
+
+        <label for="cp">Chest pain type:</label>
+        <select id="cp" name="cp" required>
+            <option value="0">No chest pain</option>
+            <option value="1">Typical angina</option>
+            <option value="2">Atypical angina</option>
+            <option value="3">Non-anginal pain</option>
+        </select><br><br>
+
+        <label for="trestbps">Resting blood pressure (mmHg): </label>
+        <input type="number" id="trestbps" name="trestbps" required><br><br>
+
+        <label for="chol">Serum cholesterol (mg/dl): </label>
+        <input type="number" id="chol" name="chol" required><br><br>
+
+        <label for="fbs">Fasting blood sugar > 120 mg/dl:</label>
+        <select id="fbs" name="fbs" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        <label for="restecg">Resting electrocardiogram (ECG):</label>
+        <select id="restecg" name="restecg" required>
+            <option value="0">Normal</option>
+            <option value="1">ST-T wave abnormality</option>
+            <option value="2">Left ventricular hypertrophy</option>
+        </select><br><br>
+
+        <label for="thalach">Maximum heart rate achieved (bpm): </label>
+        <input type="number" id="thalach" name="thalach" required><br><br>
+
+        <label for="exang">Exercise induced angina:</label>
+        <select id="exang" name="exang" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        <label for="oldpeak">Depression induced by exercise relative to rest<br>(in units of ST depression, e.g., 1.0) </label>
+        <input type="number" step="0.1" id="oldpeak" name="oldpeak" required><br><br>
+
+        <label for="slope">Slope of peak exercise ST segment:</label>
+        <select id="slope" name="slope" required>
+            <option value="0">Upsloping</option>
+            <option value="1">Flat</option>
+            <option value="2">Downsloping</option>
+        </select><br><br>
+
+        <label for="ca">Number of major vessels colored by fluoroscopy:</label>
+        <select id="ca" name="ca" required>
+            <option value="0">None</option>
+            <option value="1">1 vessel</option>
+            <option value="2">2 vessels</option>
+            <option value="3">3 vessels</option>
+        </select><br><br>
+
+        <label for="thal">Thalassemia type:</label>
+        <select id="thal" name="thal" required>
+            <option value="3">Normal</option>
+            <option value="6">Fixed defect</option>
+            <option value="7">Reversible defect</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if prediction %}
+        <h2>{{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
